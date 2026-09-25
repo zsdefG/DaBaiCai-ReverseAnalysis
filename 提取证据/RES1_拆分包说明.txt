@@ -10,5 +10,7 @@ RES1 拆分包说明
   Windows (PowerShell):  cmd /c "copy /b part01.txt+part02.txt+part03.txt+part04.txt+part05.txt+part06.txt+part07.txt RES1_驱动伪装配置_字符串.txt"
   Linux / macOS:  cat part0*.txt > RES1_驱动伪装配置_字符串.txt
 
-合并后字节数应为 199,734（UTF-8）。
-原始文件：提取证据/RES1_驱动伪装配置_字符串.txt（本地留档）
+注意：分片切分点位于片间衔接处，缺少换行符。直接拼接后约为 199,728 字节
+（原始 199,734 字节，差 6 个换行；正文内容逐字符一致，仅行尾差异）。
+如需与原始完全一致，请在上述命令基础上补齐 6 个换行，
+或直接使用本地留档原件（提取证据/RES1_驱动伪装配置_字符串.txt）。
