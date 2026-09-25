@@ -1,0 +1,65 @@
+# DEPLOY = SetSys.exe 内嵌的安装完成阶段处理模块 (VMProtect 保护)
+# 关键类: CDelSecuritySoft (删除安全软件) / qcutil::CWinRegKey (注册表写入)
+# 已还原: 关闭 UAC(3键)+防火墙(2键) 写注册表函数 0x10007E80
+
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+
+Scanning the drive for archives:
+1 file, 2789888 bytes (2725 KiB)
+
+Listing archive: D:\�ĵ�\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY
+
+--
+Path = D:\�ĵ�\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY
+Type = PE
+Physical Size = 2789888
+CPU = x86
+Characteristics = Executable DLL 32-bit
+Created = 2020-09-05 16:37:48
+Headers Size = 1024
+Checksum = 0
+Name = DllDeplo.dll
+Image Size = 2818048
+Section Alignment = 4096
+File Alignment = 512
+Code Size = 373248
+Initialized Data Size = 123904
+Uninitialized Data Size = 0
+Linker Version = 14.0
+OS Version = 5.1
+Image Version = 0.0
+Subsystem Version = 5.1
+Subsystem = Windows GUI
+DLL Characteristics = Relocated NX-Compatible
+Stack Reserve = 1048576
+Stack Commit = 4096
+Heap Reserve = 1048576
+Heap Commit = 4096
+Image Base = 268435456
+Comment = 
+{
+FileVersion: 1.0.235.178
+ProductVersion: 1.0.235.178
+CompanyName: UNDEFINED
+FileDescription: UNDEFINED
+InternalName: DllDeplo.dll
+LegalCopyright: Copyright (C) 2018
+OriginalFilename: DllDeplo.dll
+ProductName: UNDEFINED
+}
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2020-09-05 16:37:48 .....       373248       373248  .text
+2020-09-05 16:37:48 .....        83456        83456  .rdata
+2020-09-05 16:37:48 .....        10752        10752  .data
+2020-09-05 16:37:48 .....         3584         3584  .gfids
+2020-09-05 16:37:48 .....          512          512  .tls
+2020-09-05 16:37:48 .....      1889280      1889280  .vmp0
+2020-09-05 16:37:48 .....       398848       398848  .vmp1
+2020-09-05 16:37:48 .....        27648        27648  .reloc
+                    .....         1420         1420  .rsrc\version.txt
+                    .....          381          381  .rsrc\MANIFEST\2
+------------------- ----- ------------ ------------  ------------------------
+2020-09-05 16:37:48            2789129      2789129  10 files

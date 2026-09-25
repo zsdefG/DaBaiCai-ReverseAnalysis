@@ -1,0 +1,35 @@
+# 360SAFE 包 = 360 安全数据库文件(白名单篡改用)
+
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+
+Scanning the drive for archives:
+1 file, 202531 bytes (198 KiB)
+
+Listing archive: D:\�ĵ�\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\360SAFE
+
+--
+Path = D:\�ĵ�\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\360SAFE
+Type = 7z
+Physical Size = 202531
+Headers Size = 414
+Method = LZMA2:768k
+Solid = +
+Blocks = 3
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2017-07-25 18:19:59 D....            0            0  360safe
+2017-07-25 18:20:11 D....            0            0  360safe\deepscan
+2017-06-16 14:14:26 D....            0            0  360safe\ipc
+2017-01-12 09:53:59 D....            0            0  360safe\SoftMgr
+2017-07-25 18:20:07 D....            0            0  360sd
+2018-09-21 10:19:33 ....A            0            0  360safe\SoftMgr\ignorelist.ini
+2018-06-23 17:19:44 ....A         7796         2620  360safe\360ss2.dat
+2018-08-03 14:15:59 ....A        11160               360safe\ipc\kpuaf.dat
+2018-08-17 14:14:43 ....A         6572               360sd\sl2.db
+2018-05-23 17:42:20 ....A          170               360sd\sl2Plugin.db
+2018-07-01 16:58:46 ....A       692224       199444  360safe\deepscan\speedmem2.hg
+2018-07-01 16:56:16 ....A           56           53  360safe\SoftMgr\somextrainfo.ini
+------------------- ----- ------------ ------------  ------------------------
+2018-09-21 10:19:33             717978       202117  7 files, 5 folders
