@@ -1,0 +1,14 @@
+RES1 拆分包说明
+===============
+
+原因：RES1_驱动伪装配置_字符串.txt 原始文件约 195 KB（199,734 字节），
+超出本分析环境 GitHub MCP 传输层的单次上传上限（约 68 KB），
+因此按顺序拆分为 7 个分片文件上传（part01 ~ part07）。
+
+合并方法（按字节拼接，勿用文本模式）：
+  Windows (cmd):  copy /b part01.txt+part02.txt+part03.txt+part04.txt+part05.txt+part06.txt+part07.txt RES1_驱动伪装配置_字符串.txt
+  Windows (PowerShell):  cmd /c "copy /b part01.txt+part02.txt+part03.txt+part04.txt+part05.txt+part06.txt+part07.txt RES1_驱动伪装配置_字符串.txt"
+  Linux / macOS:  cat part0*.txt > RES1_驱动伪装配置_字符串.txt
+
+合并后字节数应为 199,734（UTF-8）。
+原始文件：提取证据/RES1_驱动伪装配置_字符串.txt（本地留档）
