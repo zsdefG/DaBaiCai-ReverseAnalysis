@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """在 AFTER (NSIS) 中搜索 Defender/关闭安全软件相关字符串"""
 import re
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\AFTER"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "AFTER")
 data = open(path, "rb").read()
 
 # NSIS 脚本中的 Unicode/ASCII 字符串

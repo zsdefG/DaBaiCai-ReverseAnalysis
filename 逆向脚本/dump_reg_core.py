@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """反汇编 0x10007F00-0x10008180 (注册表写入核心区) 和 0x10001500-0x10001600 附近"""
 import pefile, re
 from capstone import *
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path, fast_load=False)
 img = pe.OPTIONAL_HEADER.ImageBase
 

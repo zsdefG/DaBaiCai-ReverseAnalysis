@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """在 DEPLOY .text 中定位服务/注册表 API 的调用点"""
 import pefile
 import re
 from capstone import *
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path, fast_load=False)
 img = pe.OPTIONAL_HEADER.ImageBase
 

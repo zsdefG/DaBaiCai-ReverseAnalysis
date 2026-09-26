@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """核查 0x1005d110 动态函数指针、0x10067AC4 消息、中文/提示字符串"""
 import pefile, re, struct
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path, fast_load=False)
 img = pe.OPTIONAL_HEADER.ImageBase
 data = open(path, "rb").read()

@@ -1,3 +1,5 @@
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 # CDelSecuritySoft 分析脚本 (Ghidra 12.x, Jython)
 # 流程: 定位 RTTI TypeDescriptor 字符串 -> 找引用它的 RTTI CompleteObjectLocator -> 找引用 COL 的 vftable -> 反汇编所有方法
 import sys
@@ -7,7 +9,7 @@ from ghidra.program.model.address import AddressSet
 from ghidra.program.model.symbol import SourceType, RefType
 from ghidra.app.decompiler import DecompInterface, DecompileOptions
 
-OUT = open(r"d:\文档\workbuddy\Safe\my\baicai\ghidra\cdel_security_soft_dump.txt", "w", encoding="utf-8")
+OUT = open(os.path.join(_BASE, "baicai", "ghidra", "cdel_security_soft_dump.txt"), "w", encoding="utf-8")
 
 def log(*a):
     msg = " ".join(str(x) for x in a)

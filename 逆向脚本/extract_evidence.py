@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """提取非可执行证据: RES1/SECURCONF 字符串转储 + 360SAFE 包文件清单 + DEPLOY 资源结构"""
 import re, os
 
-base = r"D:\文档\workbuddy\Safe\my\baicai"
+base = os.path.join(_BASE, "baicai")
 out = os.path.join(base, "打包发布包", "提取证据")
 os.makedirs(out, exist_ok=True)
 

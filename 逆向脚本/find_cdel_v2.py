@@ -1,8 +1,10 @@
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 # CDelSecuritySoft 定位脚本 v2 (Ghidra 12.x Jython)
 # 目标: 找到 .text 中引用 RTTI 字符串/TypeDescriptor 的指令, 反汇编上下文
 import re
 
-OUT = open(r"d:\文档\workbuddy\Safe\my\baicai\ghidra\cdel_refs.txt", "w", encoding="utf-8")
+OUT = open(os.path.join(_BASE, "baicai", "ghidra", "cdel_refs.txt"), "w", encoding="utf-8")
 
 def log(*a):
     msg = " ".join(str(x) for x in a)

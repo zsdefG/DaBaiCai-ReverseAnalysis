@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """在 DEPLOY 中定位 TypeDescriptor -> COL -> vftable (32位 RTTI)"""
 import struct, pefile
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path)
 img = pe.OPTIONAL_HEADER.ImageBase
 

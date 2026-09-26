@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """扫描 .text 中引用 EnableFirewall/EnableLUA/ConsentPrompt 字符串区域的指令 + dump 上下文"""
 import pefile, re
 from capstone import *
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path, fast_load=False)
 img = pe.OPTIONAL_HEADER.ImageBase
 

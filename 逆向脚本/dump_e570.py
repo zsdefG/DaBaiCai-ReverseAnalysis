@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """1) dump 0x1000E62E-0x1000E6C0 (函数尾部) 2) 找调用 0x1000E570 的位置并 dump 参数"""
 import pefile, re
 from capstone import *
 
-path = r"D:\文档\workbuddy\Safe\my\baicai\setsys_unpack\.rsrc\2052\RCDATA\DEPLOY"
+path = os.path.join(_BASE, "baicai", "setsys_unpack", ".rsrc", "2052", "RCDATA", "DEPLOY")
 pe = pefile.PE(path, fast_load=False)
 img = pe.OPTIONAL_HEADER.ImageBase
 data = open(path, "rb").read()

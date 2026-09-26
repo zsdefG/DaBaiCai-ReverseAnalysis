@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
+_BASE = os.environ.get("PE_BASE") or os.getcwd()
 """在主安装器和 SetSys.exe 中搜索 Defender 关闭相关字符串"""
 import re
 
 files = {
-    "主安装器 DaBaiCai_d30": r"D:\文档\workbuddy\Safe\my\baicai\某白菜PE装机工具+取证工具留档\DaBaiCai_d30_v6.0_2606_Online.exe",
-    "SetSys.exe": r"D:\文档\workbuddy\Safe\my\baicai\submit_samples\SetSys.exe",
+    "主安装器 DaBaiCai_d30": os.path.join(_BASE, "baicai", "某白菜PE装机工具+取证工具留档", "DaBaiCai_d30_v6.0_2606_Online.exe"),
+    "SetSys.exe": os.path.join(_BASE, "baicai", "submit_samples", "SetSys.exe"),
 }
 pats = [
     b"WinDefend", b"Defender", b"DisableAntiSpyware", b"DisableAntiVirus", b"DisableRealtimeMonitoring",
